@@ -1,0 +1,49 @@
+@import "../../breakpoints";
+@import "../../colors";
+
+#services {
+    display: flex;
+
+    &.light{
+        color: $text-primary-light;
+    }
+
+    article {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        img {
+            flex: 3;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        hr {
+            margin: 10px 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        &:nth-child(2) {
+            margin: 0 10px;
+        }
+    }
+
+    @media screen and (max-width:$breakpoint-sm) {
+        flex-direction: column;
+
+        article {
+            img {
+                height: 33vh;
+                flex: 0 0 auto;
+            }
+
+            &:nth-child(2) {
+                margin: unset;
+            }
+        }
+    }
+}

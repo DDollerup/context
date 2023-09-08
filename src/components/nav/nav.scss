@@ -1,0 +1,62 @@
+@import "../../breakpoints";
+@import "../../colors";
+
+nav {
+    background-color: $background-primary;
+
+    &.light {
+        background-color: $background-primary-light;
+
+        div ul li {
+            color: $text-primary-light;
+        }
+
+        div button{
+            background-color: $background-primary;
+            color:$text-primary;
+        }
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+
+            li {
+                padding: 15px;
+                transition: 125ms all ease;
+                color: $text-primary;
+
+                &:hover {
+                    background-color: $background-tertiary;
+                    color: $text-secondary;
+                }
+            }
+
+            // @media screen and (max-width:$breakpoint-md) {
+            //     width: 85%;
+            // }
+
+            // @media screen and (max-width:$breakpoint-sm) {
+            //     width: 100%;
+            //     justify-content: center;
+            // }
+        }
+
+        button {
+            border: 0;
+            padding: 5px;
+            font-weight: bold;
+            transition: 125ms all ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $background-tertiary;
+                color: $text-primary;
+            }
+        }
+    }
+}

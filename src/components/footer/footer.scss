@@ -1,0 +1,27 @@
+@import "../../breakpoints";
+@import "../../colors";
+
+footer {
+    background-color: $background-primary;
+    color: $text-primary;
+
+    &.light {
+        background-color: $background-primary-light;
+        color: $text-primary-light;
+    }
+
+    div {
+        width: 70%;
+        padding: 30px 15px;
+        margin: auto;
+        text-align: center;
+
+        @media screen and (max-width:$breakpoint-md) {
+            width: 85%;
+        }
+
+        @media screen and (max-width:$breakpoint-sm) {
+            width: 100%;
+        }
+    }
+}
